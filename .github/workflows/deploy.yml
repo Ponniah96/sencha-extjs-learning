@@ -1,4 +1,4 @@
-name: Deploy Sencha Ext Gen App
+name: Deploy Static Sencha Build to GitHub Pages
 
 on:
   push:
@@ -6,31 +6,12 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Authenticate Sencha npm registry
-        run: |
-          npm config set @sencha:registry https://npm.sencha.com
-          npm config set //npm.sencha.com/:username $SENCHA_NPM_USER
-          npm config set //npm.sencha.com/:_password $(echo -n $SENCHA_NPM_PASS | base64)
-          npm config set //npm.sencha.com/:email $SENCHA_NPM_USER
-        env:
-          SENCHA_NPM_USER: ${{ secrets.SENCHA_NPM_USER }}
-          SENCHA_NPM_PASS: ${{ secrets.SENCHA_NPM_PASS }}
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build app
-        run: npm run build:desktop
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
