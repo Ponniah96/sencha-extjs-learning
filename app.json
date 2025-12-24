@@ -5,7 +5,6 @@
   "framework": "ext",
   "template": "moderndesktop",
   "indexHtmlPath": "index.html",
-  "basePath": "/sencha-extjs-learning/",
   "requires": ["font-awesome"],
 
   "builds": {
@@ -40,6 +39,7 @@
 
   "output": {
     "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+    "baseUrl": "/sencha-extjs-learning/",
     "page": "index.html",
     "manifest": "generatedFiles/${build.id}.json",
     "js": "generatedFiles/${build.id}/app.js",
