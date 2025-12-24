@@ -1,0 +1,22 @@
+// sass for MyExtGenApp.view.basics.BasicsView
+.basicsview {
+  color: $color;
+  font-size: 16px;
+  background-color: $base-foreground-color;
+  padding: 15px 0px 0px 15px;
+  border: 1px solid lightgray;
+  box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+  // .basicsviewbutton {
+  //   background-color: $milk_chocolate;
+  //   color: $button-text-color;
+  //   border: none;
+  //   padding: 10px 20px;
+  //   cursor: pointer;
+  //   font-size: 14px;
+  //   border-radius: 4px;
+
+  //   &:hover {
+  //     background-color: darken($milk_chocolate, 10%);
+  //   }
+  // }
+}

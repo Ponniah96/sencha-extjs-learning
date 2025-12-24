@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "id": 1023, "name": "John", "role": "Developer" },
+    { "id": 1234, "name": "Sara", "role": "Tester" },
+    { "id": 1506, "name": "Mike", "role": "Manager" }
+  ]
+}

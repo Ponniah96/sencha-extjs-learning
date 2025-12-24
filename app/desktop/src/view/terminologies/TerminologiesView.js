@@ -58,5 +58,32 @@ Ext.define("MyExtGenApp.view.terminologies.TerminologiesView", {
           <li>ext-gen app -i</li>
       </ul>
 
+      <hr>
+
+      <h3>GitHub Commands to Host application on GitHub Pages</h3>
+
+      <h4>GitHub Push Commands</h4>
+        <ul>
+            <li>git init</li>
+            <li>git add .</li>
+            <li>git commit -m "Initial commit"</li>
+            <li>git branch -M main</li>
+            <li>git remote add origin https://github.com/username/repository.git</li>
+            <li>git push -u origin main</li>
+        </ul>
+        <h4>GitHub Pages Setup</h4>
+        <ul>
+            <li>in app.json file, set the "baseUrl" property to "/repository-name/"</li>
+            <li>git run build:desktop</li>
+            <li>In index.html change  'base href="/sencha-extjs-learning/"'</li>
+            <li>comit changes and push to GitHub</li>
+            <li>Go to your repository on GitHub.</li>
+            <li>Click on the "Settings" tab.</li>
+            <li>In the left sidebar, click on "Pages".</li>
+            <li>Under "Source", select the branch you want to use (e.g., main) and the folder (e.g., /root or /docs).</li>
+            <li>Click "Save".</li>
+            <li>Your site will be published at https://username.github.io/repository/</li>
+        </ul>
+
         `,
 });

@@ -45,13 +45,19 @@ Ext.define("MyExtGenApp.view.main.MainViewModel", {
             xtype: "personnelview",
             leaf: true,
           },
+          //add new items on the next line (from sencha-node generate viewpackage)
           {
             text: "Basics & Prerequisites",
             iconCls: "x-fa fa-book",
             xtype: "terminologiesview",
             leaf: true,
           },
-          //add new items on the next line (from sencha-node generate viewpackage)
+          {
+            text: "Simple Grid Example",
+            iconCls: "x-fa fa-book",
+            xtype: "basicsview",
+            leaf: true,
+          },
         ],
       },
     },

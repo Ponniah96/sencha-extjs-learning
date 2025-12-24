@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "data": [
+    { "id": 1, "name": "John", "role": "Developer" },
+    { "id": 2, "name": "Sara", "role": "Tester" },
+    { "id": 3, "name": "Mike", "role": "Manager" },
+    { "id": 4, "name": "Anna", "role": "Designer" }
+  ]
+}
