@@ -5,9 +5,8 @@
   "framework": "ext",
   "template": "moderndesktop",
   "indexHtmlPath": "index.html",
-  "requires": [
-    "font-awesome"
-  ],
+  "basePath": "/sencha-extjs-learning/",
+  "requires": ["font-awesome"],
 
   "builds": {
     "desktop": {
@@ -22,30 +21,21 @@
     }
   },
 
-  "classpath": ["app/shared/src","app/${build.id}/src"],
-  "overrides": ["app/shared/overrides","app/${build.id}/overrides"],
+  "classpath": ["app/shared/src", "app/${build.id}/src"],
+  "overrides": ["app/shared/overrides", "app/${build.id}/overrides"],
 
   "sass": {
     "namespace": "MyExtGenApp",
 
-    "etc": [
-      "sass/etc/all.scss"
-    ],
-    "var": [
-      "app/shared/sass/var.scss",
-      "app/${build.id}/sass/var.scss"
-    ],
-    "src": [
-      "app/shared/src/sass/src.scss",
-      "app/${build.id}/sass/src.scss"
-    ]
+    "etc": ["sass/etc/all.scss"],
+    "var": ["app/shared/sass/var.scss", "app/${build.id}/sass/var.scss"],
+    "src": ["app/shared/src/sass/src.scss", "app/${build.id}/sass/src.scss"]
   },
 
   "resources": [
-    { "path": "resources", "output": "shared" }
+    { "path": "resources", "output": "shared" },
 
-    ,{ "path": "resources/${build.id}" }
-
+    { "path": "resources/${build.id}" }
   ],
 
   "output": {
@@ -53,24 +43,22 @@
     "page": "index.html",
     "manifest": "generatedFiles/${build.id}.json",
     "js": "generatedFiles/${build.id}/app.js",
-    "appCache": {"enable": false},
+    "appCache": { "enable": false },
     "resources": {
       "path": "${build.id}/resources",
       "shared": "resources"
     }
   },
-  
+
   "fashion": {
-   "missingParameters": "error",
-    "inliner": {"enable": false}
+    "missingParameters": "error",
+    "inliner": { "enable": false }
   },
 
-  "js": [
-    {"path": "app.js", "bundle": true}
-  ],
+  "js": [{ "path": "app.js", "bundle": true }],
 
-  "classic": {"js": []},
-  "modern": {"js": []},
+  "classic": { "js": [] },
+  "modern": { "js": [] },
 
   "css": [
     {
@@ -119,8 +107,8 @@
   },
 
   "cache": {
-      "enable": false,
-      "deltas": "${build.id}/deltas"
+    "enable": false,
+    "deltas": "${build.id}/deltas"
   },
 
   "appCache": {
