@@ -16,13 +16,20 @@ jobs:
         with:
           node-version: 18
 
-      - name: Force npm public registry
-        run: npm config set registry https://registry.npmjs.org/
+      - name: Authenticate Sencha npm registry
+        run: |
+          npm config set @sencha:registry https://npm.sencha.com
+          npm config set //npm.sencha.com/:username $SENCHA_NPM_USER
+          npm config set //npm.sencha.com/:_password $(echo -n $SENCHA_NPM_PASS | base64)
+          npm config set //npm.sencha.com/:email $SENCHA_NPM_USER
+        env:
+          SENCHA_NPM_USER: ${{ secrets.SENCHA_NPM_USER }}
+          SENCHA_NPM_PASS: ${{ secrets.SENCHA_NPM_PASS }}
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build Ext Gen app
+      - name: Build app
         run: npm run build:desktop
 
       - name: Deploy to GitHub Pages
